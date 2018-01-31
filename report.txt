@@ -1,0 +1,35 @@
+-----------------------
+Known Plain Text Attack
+-----------------------
+
+key:
+
+
+message:
+
+
+-----------------------
+Cipher Text Only Attack
+-----------------------
+
+key:
+
+
+message:
+
+
+theoretical number of cipher text blocks needed for unambiguous decoding:
+
+
+actual number of cipher text blocks needed for unambiguous decoding:
+
+
+--------------------
+Time Memory Tradeoff
+--------------------
+
+key:
+
+
+message:
+

@@ -11,7 +11,7 @@ public class CTO {
         ArrayList<String> cipherText = new ArrayList<>();
         try {
             BufferedReader reader = new BufferedReader(new FileReader(filepath));
-            String line = null;
+            String line;
             while ((line = reader.readLine()) != null) cipherText.add(line);
         } catch (Exception e) {
             e.printStackTrace();

@@ -1,14 +1,13 @@
-/**
- * Given a chunk of cipher text, and the plain text corresponding to first block,
- * this program performs a brute force search of the key space to find the key.
- *
- * Once the key has been found, this program will use the key to decode the rest
- * of the message.
- */
-
 public class KPT {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        int cipherText = Integer.decode("0xb73f");
+        int plainText = Integer.decode("0x4120");
+        double keyCount = Math.pow(2, 16);
+
+        for (int key = 1; key < keyCount; key++) {
+            int decrypted = Coder.decrypt(key, cipherText);
+            if (decrypted == plainText) System.out.printf("0x%04X", key);
+        }
     }
 }

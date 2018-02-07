@@ -3,10 +3,10 @@ Known Plain Text Attack
 -----------------------
 
 key:
-
+0x86c9
 
 message:
-
+A day can really slip by when you're deliberately avoiding what you're supposed to do
 
 -----------------------
 Cipher Text Only Attack

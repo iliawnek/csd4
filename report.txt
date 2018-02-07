@@ -2,34 +2,47 @@
 Known Plain Text Attack
 -----------------------
 
-key:
-0x86C9
+Key:
+  0x86C9
 
-message:
-A day can really slip by when you're deliberately avoiding what you're supposed to do
+Message:
+  A day can really slip by when you're deliberately avoiding what you're supposed to do
 
 -----------------------
 Cipher Text Only Attack
 -----------------------
 
-key:
-0xCF0D
+Key:
+  0xCF0D
 
-message:
-For perfect safety... sit on a fence and watch the birds.
+Message:
+  For perfect safety... sit on a fence and watch the birds.
 
-theoretical number of cipher text blocks needed for unambiguous decoding:
+Theoretical number of cipher text blocks needed for unambiguous decoding:
+  sac16 uses 16-bit keys, and we will assume that keys are chosen at random, so H(K) = 16.
+  The plain text message is in English, so D = 3.2.
+  N_u = H(K) / D = 16 / 3.2 = 5, so the unicity distance is 5 characters.
+  Each block codes 2 characters.
+  blocks needed = 5/2 = 2.5 blocks
 
+Actual number of cipher text blocks needed for unambiguous decoding:
+  Decoding one cipher block gives "Fo". This alone is not an English word.
+  Decoding two cipher blocks gives "For ". This is a capitalised English word ending with a space.
+  So 2 blocks are actually needed to unambiguously decode the cipher text.
 
-actual number of cipher text blocks needed for unambiguous decoding:
+Why they are different:
+  The theoretical value is only an approximation for all potential English messages.
+  An approximation implies no guarantee for complete accuracy.
+  The actual value is only for this one specific message.
+  It will likely be different for each message.
 
 
 --------------------
 Time Memory Tradeoff
 --------------------
 
-key:
+Key:
 
 
-message:
+Message:
 

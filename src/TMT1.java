@@ -9,8 +9,8 @@ public class TMT1 {
         String filepath = args[0];
         int plainText = Integer.decode("0x5365");
         int keyCount = 65536;
-        int chainLength = 256;
-        int chainCount = 256;
+        int chainLength = 1024;
+        int chainCount = 1024;
         Random random = new Random();
 
         try {

@@ -3,7 +3,7 @@ Known Plain Text Attack
 -----------------------
 
 key:
-0x86c9
+0x86C9
 
 message:
 A day can really slip by when you're deliberately avoiding what you're supposed to do
@@ -13,10 +13,10 @@ Cipher Text Only Attack
 -----------------------
 
 key:
-
+0xCF0D
 
 message:
-
+For perfect safety... sit on a fence and watch the birds.
 
 theoretical number of cipher text blocks needed for unambiguous decoding:
 

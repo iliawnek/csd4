@@ -1,0 +1,26 @@
+a e h j x
+b b c d g h k n p q t v w x z
+c b d g j m n q v x y z
+d k x z
+e z
+f k q x z
+g j k q v x z
+h g j k q v x z
+i h i j q u y
+j a b c d f g h i j k l m n p q r s t v w x y z
+k a b c d f g h j k l m p q r u v x z
+l h x z
+m f g j k l q r v x z
+n q z
+o j q x
+p c d f g j k m n q v x z
+q a b c d e f g h i j k l m n o p q r s t v w x y z
+r q x z
+s x z
+t j k q x z
+u j k q u v w
+v b c d f g h j k l m n p q r s t u v w x y z
+w b g j k q x y z
+x b d f g h j k l m n q r s v w x y z
+y j k q x y z
+z a b c d f g h j k m n o p q r s t u v w x y

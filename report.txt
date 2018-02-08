@@ -13,22 +13,48 @@ key = 0xCF0D
 message = For perfect safety... sit on a fence and watch the birds.
 
 Theoretical number of cipher text blocks needed for unambiguous decoding:
-  sac16 uses 16-bit keys, and we will assume that keys are chosen at random, so H(K) = 16.
-  The plain text message is in English, so D = 3.2.
-  N_u = H(K) / D = 16 / 3.2 = 5, so the unicity distance is 5 characters.
-  Each block codes 2 characters.
-  blocks needed = 5/2 = 2.5 blocks
+  H(K):
+    sac16 uses 16-bit keys
+    We will assume that keys are chosen at random
+    Entropy of the keyspace H(K) = 16
+  r:
+    The plain text message is in English
+    Actual rate r = 1.5
+  L:
+    I will assume that the message alphabet consists only of:
+        A-Z
+        a-z
+        comma
+        period
+        space
+        newline
+    Number of characters in the alphabet L = 26+26+4 = 56
+  R:
+    Absolute rate R = log_2(56) = 5.8
+  D:
+    Redundancy D = R-r = 5.8-1.5 = 4.3
+  N_u:
+    Unicity distance N_u = H(K)/D = 16/4.3 = 3.7
+  blocks needed:
+    Each block codes 2 characters
+    3.7 characters are needed
+    blocks needed = 3.7/2 = 1.85
 
 Actual number of cipher text blocks needed for unambiguous decoding:
-  Decoding one cipher block gives "Fo". This alone is not an English word.
-  Decoding two cipher blocks gives "For ". This is a capitalised English word ending with a space.
-  So 2 blocks are actually needed to unambiguously decode the cipher text.
+  First N blocks of a message are deemed "valid English" if:
+    All characters are in the previously-mentioned alphabet.
+    All digrams are not in list of non-occurring English digrams (digrams.txt).
+  At 7 cipher blocks:
+    There are 4 messages whose first 7 blocks satisfy the "valid English" requirements, including the actual message.
+    The 3 non-actual messages are close enough to the actual message to be readable and understandable.
+    blocks needed for readable message = 7
+  At 10 cipher blocks:
+    Only the actual message is matched.
+    blocks needed for only actual message = 10
 
 Why they are different:
-  The theoretical value is only an approximation for all potential English messages.
-  An approximation implies no guarantee for complete accuracy.
-  The actual value is only for this one specific message.
-  It will likely be different for each message.
+  The theoretical value only defines the absolute minimum.
+  In practice, many more blocks are likely required to reliably break the encryption.
 
 
 --------------------
